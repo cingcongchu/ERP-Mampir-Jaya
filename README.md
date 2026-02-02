@@ -1,0 +1,1 @@
+Website ERP Mampir Jaya yang berfungsi untuk mengintegrasikan berbagai departemen (keuangan, HR, inventaris, produksi) ke dalam satu platform berbasis cloud untuk meningkatkan efisiensi, mengotomatisasi proses bisnis, dan menyediakan data real-time. Teknologi ini mempermudah pengambilan keputusan, mengurangi human error, memantau stok, dan menghemat biaya operasional
