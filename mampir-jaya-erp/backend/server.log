@@ -1,0 +1,153 @@
+[dotenv@17.2.3] injecting env (5) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Server running on port 5004
+Available routes:
+  GET /test
+  GET /api/test
+  POST /debug/create-customer
+Executing (default): SELECT 1+1 AS result
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'SalesOrder' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+MySQL connected
+Executing (default): SHOW INDEX FROM `SalesOrder`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'SalesOrderItem' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `SalesOrderItem`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Sale' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `Sale`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'SaleItem' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `SaleItem`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Customer' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `Customer`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Purchase' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `Purchase`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'PurchaseItem' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `PurchaseItem`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Product' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `Product`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Supplier' AND TABLE_SCHEMA = 'mampir_jaya_erp'
+Executing (default): SHOW INDEX FROM `Supplier`
+Database synced
+Test route accessed
+Executing (default): SELECT count(*) AS `count` FROM `Sale` AS `Sale`;
+Processing customer: Alice Cooper Type: string
+Looking for customer: Alice Cooper
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer` WHERE `Customer`.`name` = 'Alice Cooper' LIMIT 1;
+Found customer: null
+Creating new customer - CODE UPDATED
+Executing (default): INSERT INTO `Customer` (`id`,`name`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?);
+Created customer: Alice Cooper
+Final customerId: 11
+Executing (default): INSERT INTO `Sale` (`id`,`invoiceNumber`,`total`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Semen Portland' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 1;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT count(*) AS `count` FROM `Sale` AS `Sale`;
+Processing customer: David Bowie Type: string
+Looking for customer: David Bowie
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer` WHERE `Customer`.`name` = 'David Bowie' LIMIT 1;
+Found customer: null
+Creating new customer - CODE UPDATED
+Customer details provided: {
+  address: 'Jl. Rock n Roll No. 123',
+  phone: '08198765432',
+  email: 'david@bowie.com'
+}
+Executing (default): INSERT INTO `Customer` (`id`,`name`,`address`,`phone`,`email`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+Created customer: David Bowie
+Final customerId: 12
+Executing (default): INSERT INTO `Sale` (`id`,`invoiceNumber`,`total`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Cat Tembok Interior' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 6;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Test route accessed
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Semen Portland%' OR `Product`.`name` LIKE '%semen portland%' OR `Product`.`name` LIKE '%SEMEN PORTLAND%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%b%' OR `Product`.`name` LIKE '%b%' OR `Product`.`name` LIKE '%B%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%b%' OR `Product`.`name` LIKE '%b%' OR `Product`.`name` LIKE '%B%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%ba%' OR `Product`.`name` LIKE '%ba%' OR `Product`.`name` LIKE '%BA%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%batu%' OR `Product`.`name` LIKE '%batu%' OR `Product`.`name` LIKE '%BATU%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Batu Bata Merah%' OR `Product`.`name` LIKE '%batu bata merah%' OR `Product`.`name` LIKE '%BATU BATA MERAH%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%sem%' OR `Product`.`name` LIKE '%sem%' OR `Product`.`name` LIKE '%SEM%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%ss%' OR `Product`.`name` LIKE '%ss%' OR `Product`.`name` LIKE '%SS%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%semen%' OR `Product`.`name` LIKE '%semen%' OR `Product`.`name` LIKE '%SEMEN%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Semen Portland%' OR `Product`.`name` LIKE '%semen portland%' OR `Product`.`name` LIKE '%SEMEN PORTLAND%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Semen Portland%' OR `Product`.`name` LIKE '%semen portland%' OR `Product`.`name` LIKE '%SEMEN PORTLAND%');
+Executing (default): SELECT count(*) AS `count` FROM `Sale` AS `Sale`;
+Processing customer: Michael Type: string
+Looking for customer: Michael
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer` WHERE `Customer`.`name` = 'Michael' LIMIT 1;
+Found customer: null
+Creating new customer - CODE UPDATED
+Customer details provided: {
+  name: 'Michael',
+  address: 'Jalan Banana No.38 Rt.2 RW.34 Blok J2',
+  phone: '1234455',
+  email: 'aksoorlljja'
+}
+Executing (default): INSERT INTO `Customer` (`id`,`name`,`address`,`phone`,`email`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+Created customer: Michael
+Final customerId: 13
+Executing (default): INSERT INTO `Sale` (`id`,`invoiceNumber`,`total`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Semen Portland' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 1;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Semen Portland' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 1;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Semen Portland%' OR `Product`.`name` LIKE '%semen portland%' OR `Product`.`name` LIKE '%SEMEN PORTLAND%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%B%' OR `Product`.`name` LIKE '%b%' OR `Product`.`name` LIKE '%B%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Ba%' OR `Product`.`name` LIKE '%ba%' OR `Product`.`name` LIKE '%BA%');
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE (`Product`.`name` LIKE '%Batu Bata Merah%' OR `Product`.`name` LIKE '%batu bata merah%' OR `Product`.`name` LIKE '%BATU BATA MERAH%');
+Executing (default): SELECT count(*) AS `count` FROM `Sale` AS `Sale`;
+Processing customer: Michael Type: string
+Looking for customer: Michael
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer` WHERE `Customer`.`name` = 'Michael' LIMIT 1;
+Found customer: Michael
+Customer already exists, using existing one
+Final customerId: 13
+Executing (default): INSERT INTO `Sale` (`id`,`invoiceNumber`,`total`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Semen Portland' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 1;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`name` = 'Batu Bata Merah' LIMIT 1;
+Executing (default): INSERT INTO `SaleItem` (`id`,`quantity`,`price`,`createdAt`,`updatedAt`,`saleId`) VALUES (DEFAULT,?,?,?,?,?);
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product` WHERE `Product`.`id` = 2;
+Executing (default): UPDATE `Product` SET `stock`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `description`, `category`, `price`, `stock`, `unit`, `createdAt`, `updatedAt` FROM `Product` AS `Product`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+Executing (default): SELECT `id`, `name`, `address`, `phone`, `email`, `createdAt`, `updatedAt` FROM `Customer` AS `Customer`;
+API test route accessed
